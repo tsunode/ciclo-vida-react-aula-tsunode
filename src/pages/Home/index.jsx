@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Link, useSearchParams } from 'react-router-dom'
+import { Link, useSearchParams, Outlet } from 'react-router-dom'
 import '../../App.css'
 import { api } from '../../services/api'
 
@@ -35,6 +35,8 @@ export const Home = () => {
     <div className="App">
      
       <div className="card">
+        <Outlet /> 
+
         {searchParams.get('page')}
         <div>
           <button
